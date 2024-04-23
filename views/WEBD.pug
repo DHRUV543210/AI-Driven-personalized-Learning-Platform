@@ -1,0 +1,88 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title EverLearn | Web Development 
+        link(rel="stylesheet", href="style.css")
+        link(rel="stylesheet", href="/WebDFiles/Web.css")
+        script(src="/WebDFiles/Web.js" defer)
+
+        link(rel="icon", href= "/Images/EL (1) (1).png")
+
+        //-Icons
+        link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0')
+        link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0')
+
+        link(rel="icon", href= "Images/EL (1) (1).png")
+
+        //-Chatbot
+        link(rel="stylesheet", href="/Chatbot Files/Chatbot.css")
+        script(src="/Chatbot Files/Chatbot.js" defer)
+
+        //- Nunito Font
+        link(rel='preconnect' href='https://fonts.googleapis.com')
+        link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+        link(href='https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap' rel='stylesheet')
+
+    body 
+        nav.navbar#navbar
+            .logo
+                img(src="/Images/nav 42.png", alt="EverLearn")
+                h1 
+                    | Ever 
+                    span Learn 
+            
+            .menu 
+                ul 
+                    li
+                        a(href="/") Home 
+                    li
+                        a(href="/Learn") Learn 
+                    li
+                        a(href="/Courses") Courses 
+                    li
+                        a(href="/About") About 
+
+                .search 
+                    input(type="text", placeholder="Search, eg. AI")
+                    i(class="fa-regular fa-bell")
+
+        .main
+            #no1 
+                .common.size1.blur
+                .common.size2.blur
+                .common.size3.blur
+                .common.size4.blur
+                .common.size5.blur
+            #no1 
+                .common.size1.blur
+                .common.size2.blur
+                .common.size3.blur
+                .common.size4.blur
+                .common.size5.blur
+
+            button#generate(onclick='SlideUp(this.id)')
+                img#leftbard(src="/Images/left.png", alt="leftbard")
+                | Generate Your Pathway for WebD 
+                img#rightbard(src="/Images/right.png", alt="rightbard")
+
+            .container 
+                iframe(src="https://roadmap.sh/r/embed?id=65f6bbb9275ac16edcc27ef5" width="100%" height="1000px" frameBorder="0")
+
+        button.chatbot-toggler
+            span.material-symbols-outlined mode_comment
+            span.material-symbols-outlined close
+        .chatbot
+            header
+                h2 Ever Help
+                span.close-btn.material-symbols-outlined close
+            ul.chatbox
+                li.chat.incoming
+                    span.material-symbols-outlined smart_toy
+                    p Hi there &#x1F44B; How can I help you today?
+            .chat-input
+                textarea(placeholder='Enter a message ...' required)
+                span#send-btn.material-symbols-outlined send
+
+

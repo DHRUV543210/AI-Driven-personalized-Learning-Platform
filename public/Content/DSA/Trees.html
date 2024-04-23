@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trees</title>
+</head>
+<body>
+    <h1>Trees</h1>
+    <div class="defination">
+        <p>A tree data structure is a hierarchical structure that is used to represent and organize data in a way that is easy to navigate and search. It is a collection of nodes that are connected by edges and has a hierarchical relationship between the nodes. </p>
+
+        <p>The topmost node of the tree is called the root, and the nodes below it are called the child nodes. Each node can have multiple child nodes, and these child nodes can also have their own child nodes, forming a recursive structure.</p>
+
+        <p>This data structure is a specialized method to organize and store data in the computer to be used more effectively. It consists of a central node, structural nodes, and sub-nodes, which are connected via edges. We can also say that tree data structure has roots, branches, and leaves connected with one another.</p>
+
+        <img src="img/Treedatastructure.png" alt="">
+    </div>
+
+    <div class="terminology">
+        <h2>Basic Terminologies In Tree Data Structure:</h2>
+        <ul>
+            <li><b>Parent Node:</b> The node which is a predecessor of a node is called the parent node of that node. {B} is the parent node of {D, E}.</li>
+            <li><b>Child Node:</b> The node which is the immediate successor of a node is called the child node of that node. Examples: {D, E} are the child nodes of {B}.</li>
+            <li><b>Root Node:</b>The topmost node of a tree or the node which does not have any parent node is called the root node. {A} is the root node of the tree. A non-empty tree must contain exactly one root node and exactly one path from the root to all other nodes of the tree.</li>
+            <li><b>Leaf Node or External Node:</b> The nodes which do not have any child nodes are called leaf nodes. {K, L, M, N, O, P, G} are the leaf nodes of the tree.</li>
+            <li><b>Ancestor of a Node:</b> Any predecessor nodes on the path of the root to that node are called Ancestors of that node. {A,B} are the ancestor nodes of the node {E}</li>
+            <li><b>Descendant:</b> Any successor node on the path from the leaf node to that node. {E,I} are the descendants of the node {B}.</li>
+            <li><b>Sibling:</b> Children of the same parent node are called siblings. {D,E} are called siblings.</li>
+            <li><b>Level of a node:</b> The count of edges on the path from the root node to that node. The root node has level 0.</li>
+            <li><b>Internal node:</b> A node with at least one child is called Internal Node.</li>
+            <li><b>Neighbour of a Node:</b> Parent or child nodes of that node are called neighbors of that node.</li>
+            <li><b>Subtree:</b>Any node of the tree along with its descendant.</li>
+        </ul>
+    </div>
+
+    <div class="representation">
+        <h2>Representation of Tree Data Structure:</h2>
+        <p>A tree consists of a root, and zero or more subtrees T1, T2, … , Tk such that there is an edge from the root of the tree to the root of each subtree.</p>
+        <img src="img/General_Trees.jpg" alt="">
+    </div>
+
+    <div class="types">
+        <h2>Types of Tree data structures:</h2>
+        <img src="img/typoes1-768.png" alt="">
+        <ul>
+            <li><b>Binary tree:</b> In a binary tree, each node can have a maximum of two children linked to it. Some common types of binary trees include full binary trees, complete binary trees, balanced binary trees, and degenerate or pathological binary trees.</li>
+            <li><b>Ternary Tree:</b> A Ternary Tree is a tree data structure in which each node has at most three child nodes, usually distinguished as “left”, “mid” and “right”.</li>
+            <li><b>N-ary Tree or Generic Tree:</b> Generic trees are a collection of nodes where each node is a data structure that consists of records and a list of references to its children(duplicate references are not allowed). Unlike the linked list, each node stores the address of multiple nodes.</li>
+        </ul>
+    </div>
+
+    <div class="basicOperation">
+        <h2>Basic Operation Of Tree Data Structure:</h2>
+        <ul>
+            <li><b>Create –</b> create a tree in the data structure.</li>
+            <li><b>Insert −</b> Inserts data in a tree.</li>
+            <li><b>Search −</b> Searches specific data in a tree to check whether it is present or not.</li>
+            <li><b>Traversal:</b>
+                <ul>
+                    <li><b>Preorder Traversal – </b>perform Traveling a tree in a pre-order manner in the data structure.</li>
+                    <li><b>In order Traversal –</b> perform Traveling a tree in an in-order manner.</li>
+                    <li><b>Post-order Traversal –</b>perform Traveling a tree in a post-order manner.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="properties">
+        <h2>Properties of Tree data structure</h2>
+        <ul>
+            <li><b>Recursive data structure:</b> The tree is also known as a recursive data structure. A tree can be defined as recursively because the distinguished node in a tree data structure is known as a root node. The root node of the tree contains a link to all the roots of its subtrees. The left subtree is shown in the yellow color in the below figure, and the right subtree is shown in the red color. The left subtree can be further split into subtrees shown in three different colors. Recursion means reducing something in a self-similar manner. So, this recursive property of the tree data structure is implemented in various applications.
+            </li>
+            <img src="img/tree3.png" alt="">
+            <li><b>Number of edges:</b> If there are n nodes, then there would n-1 edges. Each arrow in the structure represents the link or path. Each node, except the root node, will have atleast one incoming link known as an edge. There would be one link for the parent-child relationship.</li>
+            <li><b>Depth of node x:</b> The depth of node x can be defined as the length of the path from the root to the node x. One edge contributes one-unit length in the path. So, the depth of node x can also be defined as the number of edges between the root node and the node x. The root node has 0 depth.</li>
+            <li><b>Height of node x:</b> The height of node x can be defined as the longest path from the node x to the leaf node.</li>
+        </ul>
+    </div>
+    <div class="application">
+        <h2>Application of Tree Data Structure:</h2>
+        <ul>
+            <li><b>File System: </b> This allows for efficient navigation and organization of files.</li>
+            <li><b>Data Compression:</b> Huffman coding is a popular technique for data compression that involves constructing a binary tree where the leaves represent characters and their frequency of occurrence. The resulting tree is used to encode the data in a way that minimizes the amount of storage required.</li>
+            <li><b>Compiler Design:</b> In compiler design, a syntax tree is used to represent the structure of a program.</li>
+            <li><b>Database Indexing:</b> B-trees and other tree structures are used in database indexing to efficiently search for and retrieve data.</li>
+        </ul>
+    </div>
+</body>
+</html>

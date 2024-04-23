@@ -1,0 +1,137 @@
+*{
+    font-family: 'Nunito-Sans', sans-serif;
+}
+
+.main{
+    display: flex;
+    top: 0px;
+    justify-content:space-between;
+    flex-direction: column;
+    width: 100%;
+    height: 1473px;
+    /* border: 1px solid black; */
+    border-radius: 14px;
+    position: absolute;
+}
+
+.container{
+    background-color: rgba(255, 255, 255, 0.567);
+    /* border: 10.5px solid black; */
+    border-radius: 24px;
+    padding: 12px;
+    width: 90%;
+    align-self: center;
+    position: absolute;
+    top: 10%;
+    animation: borderba 4s infinite linear;
+    box-shadow: 2px 2px 32px rgba(0,0,0,0.25);
+    /* min-height: 800px; */
+    min-height: 1100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 30px;
+}
+
+#container1, #container2{
+    width: 100%;
+    height: 650px;
+}
+
+#container1{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-evenly;
+    height: 430px;
+    /* border: 1px solid black; */
+}
+
+#container2{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-evenly;
+    height: 550px;
+    /* border: 1px solid black; */
+}
+
+#container2 h1{
+    margin-top: 12px;
+    font-size: 50px;
+    color: rgb(65, 65, 65);
+    /* align-self: center; */
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+#container2 p{
+    margin-top: 12px;
+    font-size: 28px;
+    color: rgb(65, 65, 65);
+    /* align-self: center; */
+    /* textalign: center; */
+    width: 100%;
+    padding: 12px;
+    display: block;
+    letter-spacing: 1px;
+}
+
+#container1 img{
+    width: 340px;
+    height: 400px;
+    border-radius: 18px;
+    transition: 0.3s;
+}
+
+#container1 img:hover{
+    transform: scale(1.025);
+}
+
+#container1 img:nth-child(1){
+    animation: displacefromleft 3s ease-out forwards;
+    position: relative;
+}
+#container1 img:nth-child(2){
+    animation: displacefromtop 3s ease-out forwards;
+    position: relative;
+}
+#container1 img:nth-child(3){
+    animation: displacefromright 3s ease-out forwards;
+    position: relative;
+}
+
+@keyframes displacefromleft {
+    from{
+        left: -100px;
+    }
+    To{
+        left: 30px;
+    }
+}
+@keyframes displacefromtop {
+    from{
+        top: -70px;
+    }
+    To{
+        top: 0px;
+    }
+}
+@keyframes displacefromright {
+    from{
+        right: -100px;
+    }
+    To{
+        right: 30px;
+    }
+}
+
+
+/* #container2 img{
+    width: 320px;
+    height: 480px;
+    border-radius: 8px;
+    transition: 0.3s;
+} */
+
+

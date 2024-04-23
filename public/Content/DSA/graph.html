@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph</title>
+</head>
+<body>
+    <h1>Graph</h1>
+    <p>A graph can be defined as group of vertices and edges that are used to connect these vertices. A graph can be seen as a cyclic tree, where the vertices (Nodes) maintain any complex relationship among them instead of having parent child relationship.</p>
+
+    <div class="defination">
+        <h2>Definition</h2>
+        <p>A graph G can be defined as an ordered set G(V, E) where V(G) represents the set of vertices and E(G) represents the set of edges which are used to connect these vertices.</p>
+        <p>A Graph G(V, E) with 5 vertices (A, B, C, D, E) and six edges ((A,B), (B,C), (C,E), (E,D), (D,B), (D,A)) is shown in the following figure.</p>
+
+        <img src="img/graph-definition.png" alt="">
+    </div>
+
+    <div class="directedGraph">
+        <h2>Directed and Undirected Graph</h2>
+
+        <p>A graph can be directed or undirected. However, in an undirected graph, edges are not associated with the directions with them. An undirected graph is shown in the above figure since its edges are not attached with any of the directions. If an edge exists between vertex A and B then the vertices can be traversed from B to A as well as A to B.
+        </p>
+
+        <p>In a directed graph, edges form an ordered pair. Edges represent a specific path from some vertex A to another vertex B. Node A is called initial node while node B is called terminal node.</p>
+
+        <p>A directed graph is shown in the following figure.</p>
+
+        <img src="img/directed-and-undirected-graph.png" alt="">
+    </div>
+
+    <div class="terminolgoy">
+        <h2>Graph Terminology</h2>
+        <h3>Path</h3>
+        <p>A path can be defined as the sequence of nodes that are followed in order to reach some terminal node V from the initial node U.</p>
+
+        <h3>Closed Path</h3>
+        <p>A path will be called as closed path if the initial node is same as terminal node. A path will be closed path if V0=VN.</p>
+
+        <h3>Simple Path</h3>
+        <p>If all the nodes of the graph are distinct with an exception V0=VN, then such path P is called as closed simple path.</p>
+
+        <h3>Cycle</h3>
+        <p>A cycle can be defined as the path which has no repeated edges or vertices except the first and last vertices.</p>
+
+        <h3>Connected Graph</h3>
+        <p>A connected graph is the one in which some path exists between every two vertices (u, v) in V. There are no isolated nodes in connected graph.</p>
+
+        <h3>Complete Graph</h3>
+        <p>A complete graph is the one in which every node is connected with all other nodes. A complete graph contain n(n-1)/2 edges where n is the number of nodes in the graph.</p>
+
+        <h3>Weighted Graph</h3>
+        <p>In a weighted graph, each edge is assigned with some data such as length or weight. The weight of an edge e can be given as w(e) which must be a positive (+) value indicating the cost of traversing the edge.</p>
+
+        <h3>Digraph</h3>
+        <p>A digraph is a directed graph in which each edge of the graph is associated with some direction and the traversing can be done only in the specified direction.</p>
+
+        <h3>Loop</h3>
+        <p>An edge that is associated with the similar end points can be called as Loop.</p>
+
+        <h3>Adjacent Nodes</h3>
+        <p>If two nodes u and v are connected via an edge e, then the nodes u and v are called as neighbours or adjacent nodes.</p>
+
+        <h3>Degree of the Node</h3>
+        <p>A degree of a node is the number of edges that are connected with that node. A node with degree 0 is called as isolated node.</p>
+    </div>
+
+    <div class="BFS">
+        <h2>Breadth First Algorithm in Graph</h2>
+        <p>
+            In this article, we will discuss the BFS algorithm in the data structure. Breadth-first search is a graph traversal algorithm that starts traversing the graph from the root node and explores all the neighboring nodes. Then, it selects the nearest node and explores all the unexplored nodes. While using BFS for traversal, any node in the graph can be considered as the root node.
+        </p>
+
+        <p>There are many ways to traverse the graph, but among them, BFS is the most commonly used approach. It is a recursive algorithm to search all the vertices of a tree or graph data structure. BFS puts every vertex of the graph into two categories - visited and non-visited. It selects a single node in a graph and, after that, visits all the nodes adjacent to the selected node.</p>
+
+        <h2>Applications of BFS algorithm</h2>
+        <p>The applications of breadth-first-algorithm are given as follows -</p>
+
+        <ul>
+            <li>BFS can be used to find the neighboring locations from a given source location.</li>
+            <li>In a peer-to-peer network, BFS algorithm can be used as a traversal method to find all the neighboring nodes. Most torrent clients, such as BitTorrent, uTorrent, etc. employ this process to find "seeds" and "peers" in the network.</li>
+            <li>BFS can be used in web crawlers to create web page indexes. It is one of the main algorithms that can be used to index web pages. It starts traversing from the source page and follows the links associated with the page. Here, every web page is considered as a node in the graph.</li>
+            <li>BFS is used to determine the shortest path and minimum spanning tree.</li>
+        </ul>
+
+        <h2>Algorithm</h2>
+        <p>The steps involved in the BFS algorithm to explore a graph are given as follows -</p>
+        <ul>
+            <li><b>Step 1:</b> SET STATUS = 1 (ready state) for each node in G</li>
+            <li><b>Step 2:</b>Enqueue the starting node A and set its STATUS = 2 (waiting state)</li>
+            <li><b>Step 3:</b> Repeat Steps 4 and 5 until QUEUE is empty</li>
+            <li><b>Step 4:</b>Dequeue a node N. Process it and set its STATUS = 3 (processed state).</li>
+            <li><b>Step 5:</b> Enqueue all the neighbours of N that are in the ready state (whose STATUS = 1) and set
+
+                their STATUS = 2
+                
+                (waiting state)
+                
+                [END OF LOOP]</li>
+            <li><b>Step 6:</b> EXIT</li>
+        </ul>
+
+        <h2>Example of BFS</h2>
+        <img src="img/fa90afea-028b-46ac-b52b-af77feedc587.jpeg" alt="">
+    </div>
+
+    <div class="dfs">
+        <h2>Depth First Search Algorithm in Graph</h2>
+        <p>In this article, we will discuss the DFS algorithm in the data structure. It is a recursive algorithm to search all the vertices of a tree data structure or a graph. The depth-first search (DFS) algorithm starts with the initial node of graph G and goes deeper until we find the goal node or the node with no children.</p>
+
+        <p>Because of the recursive nature, stack data structure can be used to implement the DFS algorithm. The process of implementing the DFS is similar to the BFS algorithm.</p>
+
+        <p>The step by step process to implement the DFS traversal is given as follows -</p>
+        <ol>
+            <li>First, create a stack with the total number of vertices in the graph.</li>
+            <li>Now, choose any vertex as the starting point of traversal, and push that vertex into the stack.</li>
+            <li>After that, push a non-visited vertex (adjacent to the vertex on the top of the stack) to the top of the stack.</li>
+            <li>Now, repeat steps 3 and 4 until no vertices are left to visit from the vertex on the stack's top.</li>
+            <li>If no vertex is left, go back and pop a vertex from the stack.</li>
+            <li>Repeat steps 2, 3, and 4 until the stack is empty.</li>
+        </ol>
+
+        <h2>Applications of DFS algorithm</h2>
+        <p>The applications of using the DFS algorithm are given as follows -</p>
+        <ul>
+            <li>DFS algorithm can be used to implement the topological sorting.</li>
+            <li>It can be used to find the paths between two vertices.</li>
+            <li>It can also be used to detect cycles in the graph</li>
+            <li>DFS algorithm is also used for one solution puzzles.</li>
+            <li>DFS is used to determine if a graph is bipartite or not.</li>
+        </ul>
+        <img src="img/9fa1119.jpg" alt="">
+    </div>
+</body>
+</html>

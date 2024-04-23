@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linked List</title>
+</head>
+<body>
+    <!-- heading -->
+
+    <h1>Linked List</h1>
+
+    <main>
+        <p><b>Linked List</b> is a linear data structure, in which elements are not stored at a contiguous location, rather they are linked using pointers. Linked List forms a series of connected nodes, where each node stores the data and the address of the next node.
+        </p>
+        <p>
+            A linked list is a dynamic linear data structure whose memory size can be allocated or de-allocated at run time based on the operation insertion or deletion, this helps in using system memory efficiently. Linked lists can be used to implment various data structures like a stack, queue, graph, hash maps, etc.
+        </p>
+
+        <img src="img/singly linked list.png" alt="">
+
+        <p><b>Node Structure</b>A node in a linked list typically consists of two components:</p>
+        <ul>
+            <li><b>Data:</b> It holds the actual value or data associated with the node.
+            </li>
+            <li><b>Next Pointer:</b> It stores the memory address (reference) of the next node in the sequence.
+            </li>
+        </ul>
+
+        <p><b>Head and Tail:</b> The linked list is accessed through the head node, which points to the first node in the list. The last node in the list points to NULL or nullptr, indicating the end of the list. This node is known as the tail node.
+        </p>
+
+        <!-- Why Linked List -->
+        <div class="why">
+            <h2>Why linked list data structure needed?</h2>
+
+            <p>Here are a few advantages of a linked list that is listed below, it will help you understand why it is necessary to know.</p>
+
+            <ul>
+                <li><b>Dynamic Data structure:</b> The size of memory can be allocated or de-allocated at run time based on the operation insertion or deletion.</li>
+
+                <li><b>Ease of Insertion/Deletion:</b> The insertion and deletion of elements are simpler than arrays since no elements need to be shifted after insertion and deletion, Just the address needed to be updated.</li>
+
+                <li><b>Efficient Memory Utilization:</b> As we know Linked List is a dynamic data structure the size increases or decreases as per the requirement so this avoids the wastage of memory. </li>
+                <li><b>Implementation:</b> Various advanced data structures can be implemented using a linked list like a stack, queue, graph, hash maps, etc.</li>
+            </ul>
+        </div>
+
+        <!-- Linked list vs array -->
+        <div class="llvsarray">
+            <h2>Linked List Vs Array</h2>
+            <p>In case of arrays, the size is given at the time of creation and so arrays are of fixed lenghth where as Linked lists are dynamic in size and any number of nodes can be added in the linked lists dynamically. An array can accommodate similar types of data types where as linked lists can store various nodes of different data types.</p>
+        </div>
+
+        <!-- types of array -->
+
+        <div class="types">
+            <h2>Types of Linked List</h2>
+            <p>There are mainly Three types of Linked List</p>
+            <ol>
+                <li>Singly Linked List</li>
+                <li>Doubly Linked List</li>
+                <li>Circular Linked List</li>
+            </ol>
+        </div>
+
+        <div class="singlyLL">
+            <h3>Single Linked List</h3>
+            <p>A singly linked list is a special type of linked list in which each node has only one link that points to the next node in the linked list.</p>
+
+            <p>Singly linked lists contain two "buckets" in one node; one bucket holds the data and the other bucket holds the address of the next node of the list. Traversals can be done in one direction only as there is only a single link between two nodes of the same list.
+            </p>
+
+            <img src="img/singly linked list1.png" alt="">
+
+            <h4>Characteristics of a Singly Linked List:</h4>
+            <ul>
+                <li>Each node holds a single value and a reference to the next node in the list.</li>
+                <li>The list has a head, which is a reference to the first node in the list, and a tail, which is a reference to the last node in the list.</li>
+                <li>The nodes are not stored in a contiguous block of memory, but instead, each node holds the address of the next node in the list.</li>
+                <li>Accessing elements in a singly linked list requires traversing the list from the head to the desired node, as there is no direct access to a specific node in memory.</li>
+            </ul>
+            
+            <!-- Traverse in singly LL -->
+            <div class="trverse">
+                <h3>Traversal in Singly Linked List</h3>
+                <p>Traversing is the most common operation that is performed in almost every scenario of singly linked list. Traversing means visiting each node of the list once in order to perform some operation on that.</p>
+
+                <p><b>Algorithm:</b></p>
+
+                <ul>
+                    <li><b>STEP 1:</b> SET PTR = HEAD</li>
+                    <li><b>STEP 2:</b> IF PTR = NULL (WRITE "EMPTY LIST" GOTO STEP 7 END OF IF)   
+                    </li>
+                    <li><b>STEP 3:</b> REPEAT STEP 5 AND 6 UNTIL PTR != NULL
+                    </li>
+                    <li><b>STEP 4:</b> PRINT PTR→ DATA</li>
+                    <li><b>STEP 5:</b> PTR = PTR → NEXT
+                    </li>
+                    <li>[END OF THE LOOP]</li>
+                    <li><b>STEP 6:</b> EXIT</li>
+                </ul>
+            </div>
+
+            <!-- insertion in singly LL -->
+            <div class="insertion">
+                <h3>Insertion in Singly Linked List</h3>
+                
+                <p>Given a Linked List, the task is to insert a new node in this given Linked List at the following positions:</p>
+
+                <ul>
+                    <li>At the front of the linked list </li>
+                    <li>After a given node.</li>
+                    <li>At the end of the linked list.</li>
+                </ul>
+
+                <!-- insertion at the begin -->
+                <div class="at-begin-SLL">
+                    <h4>Insertion at begining of Singly Linked List</h4>
+                    <p>
+                        To insert a node at the start/beginning/front of a Linked List, we need to:
+                    </p>
+
+                    <ul>
+                        <li>Make the first node of Linked List linked to the new node</li>
+                        <li>Remove the head from the original first node of Linked List</li>
+                        <li>Make the new node as the Head of the Linked List.</li>
+                    </ul>
+
+                    <p><b>Complexity:</b></p>
+                    <ul>
+                        <li><b>Time Complexity: O(1)</b>, We have a pointer to the head and we can directly attach a node and change the pointer. So the Time complexity of inserting a node at the head position is O(1) as it does a constant amount of work.</li>
+                        <li><b>Auxiliary Space: O(1)</b></li>
+                    </ul>
+                </div>
+
+                <!-- insertion at given node -->
+                <div class="at-given-SLL">
+                    <h4>Insertion at given node of Singly Linked List</h4>
+
+                    <p>To insert a node after a given node in a Linked List, we need to:</p>
+
+                    <ul>
+                        <li>Check if the given node exists or not.
+                            <ul>
+                                <li>If it do not exists,
+                                    <ul><li>terminate the process.</li></ul>
+                                </li>
+                                <li>If the given node exists,
+                                    <ul>
+                                        <li>Make the element to be inserted as a new node</li>
+                                        <li>Change the next pointer of given node to the new node</li>
+                                        <li>Now shift the original next pointer of given node to the next pointer of new node</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    
+                </div>
+
+                <!-- insertion at the end of singly LL -->
+                 <div class="at-end-SLL">
+                    <h4>Insertion at the end of the singly Linked List</h4>
+                    <p>To insert a node at the end of a Linked List, we need to:</p>
+
+                    <ul>
+                        <li>Go to the last node of the Linked List</li>
+                        <li>Change the next pointer of last node from NULL to the new node</li>
+                        <li>Make the next pointer of new node as NULL to show the end of Linked List</li>
+                    </ul>
+
+                    <p><b>Complexity:</b></p>
+
+                    <ul>
+                        <li><b></b>Time complexity: O(N),</b> where N is the number of nodes in the linked list. Since there is a loop from head to end, the function does O(n) work. 
+                            <ul><li>This method can also be optimized to work in O(1) by keeping an extra pointer to the tail of the linked list</li></ul>
+                        </li>
+                        <li><b>Auxiliary Space: O(1)</b></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "mime": "^4.0.1",
+    "mongoose": "^8.1.0",
+    "pug": "^3.0.2"
+  },
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "name": "test02",
+  "version": "1.0.0",
+  "main": "script.js",
+  "author": "Dhruv",
+  "license": "ISC",
+  "description": ""
+}

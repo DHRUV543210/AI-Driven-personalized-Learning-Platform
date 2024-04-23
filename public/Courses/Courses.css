@@ -1,0 +1,85 @@
+.main{
+    display: flex;
+    top: 0px;
+    justify-content:space-between;
+    flex-direction: column;
+    width: 100%;
+    height: 1473px;
+    /* border: 1px solid black; */
+    border-radius: 14px;
+    position: absolute;
+}
+
+
+.container{
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 10.5px solid black;
+    border-radius: 24px;
+    padding: 12px;
+    width: 90%;
+    align-self: center;
+    position: absolute;
+    top: 10%;
+    animation: borderba 4s infinite linear;
+    box-shadow: 2px 2px 32px rgba(0,0,0,0.25);
+    /* min-height: 800px; */
+    min-height: 1100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 30px;
+}
+
+#container1, #container2{
+    width: 100%;
+    height: 650px;
+}
+
+#container1{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-evenly;
+    height: 550px;
+}
+
+#container2{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-evenly;
+    height: 550px;
+}
+
+#container1 img{
+    width: 320px;
+    height: 480px;
+    border-radius: 8px;
+    transition: 0.1s;
+}
+
+#container2 img{
+    width: 320px;
+    height: 480px;
+    border-radius: 8px;
+    transition: 0.1s;
+}
+
+#container1 img:hover{
+    transform: scale(1.025);
+    cursor: pointer;
+}
+#container2 img:hover{
+    transform: scale(1.015);
+    cursor: pointer;
+}
+
+@keyframes borderba {
+    0% { border-color: rgba(255, 0, 0,0.56); }
+    16.666% { border-color: rgba(255, 165, 0,0.56); }
+    33.333% { border-color: rgba(255, 255, 0, 0.56); }
+    50% { border-color: rgba(0, 128, 0, 0.56); }
+    66.666% { border-color: rgba(0, 0, 255, 0.56); }
+    83.333% { border-color: rgba(75, 0, 130, 0.56); }
+    100% { border-color: rgba(238, 130, 238, 0.56); }
+}

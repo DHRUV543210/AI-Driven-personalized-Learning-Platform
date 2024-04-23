@@ -1,0 +1,93 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title EverLearn | Learn 
+
+        link(rel="stylesheet", href="style.css")
+        script(src="script.js" defer)
+
+        //- ITS OWN CSS AND JS FILES
+        link(rel="stylesheet", href="LearnCSSJS/standardFiles/standard.css")
+        script(src="/LearnCSSJS/standardFiles/standard.js" defer) 
+
+        link(rel="shortcut icon", href="Images/EL (1) (1).png", type="image/x-icon")
+ 
+        //- Nunito Font
+        link(rel='preconnect' href='https://fonts.googleapis.com')
+        link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+        link(href='https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap' rel='stylesheet')
+    body 
+        nav.navbar#navbar
+            .logo
+                img(src="Images/nav 42.png", alt="EverLearn")
+                h1 
+                    | Ever 
+                    span Learn 
+
+            .menu  
+                ul
+                    li
+                        a(href="/") Home 
+                    li
+                        a(href="/Learn") Learn 
+                    li
+                        a(href="/Courses") Courses 
+                    li
+                        a(href="/About") About 
+
+                .search 
+                    input(type="text", placeholder="Search, eg. AI")
+                    i(class="fa-regular fa-bell")
+
+        .main
+            #no1 
+                .common.size1.blur
+                .common.size2.blur
+                .common.size3.blur
+                .common.size4.blur
+                .common.size5.blur
+        
+            .container
+                .details 
+                    h1 Browse Content For...
+                    h3 There are total of 4 fields we are able to provide our services on :) 
+                .fields  
+                    .fieldscommon
+                        #field1
+                            img(src='Images/webd.png' alt='WebD')
+                        .fieldscontent
+                            h2 Web Dev
+                            p Dive into the art of web development at EverLearn. From HTML to JavaScript, master the skills to craft stunning and functional websites that leave a lasting impression.
+                        .btn(onclick="RedirectLearn('WebD')")
+                            | Browse Now
+                            i.fa-solid.fa-arrow-right
+                    .fieldscommon
+                        #field2
+                            img(src='Images/AI.png' alt='')
+                        .fieldscontent
+                            h2 AI
+                            p Discover the magic of Artificial Intelligence on EverLearn. From machine learning to neural networks, explore the limitless possibilities of intelligent technologies.
+                        .btn(onclick="RedirectLearn('AI')")
+                            | Browse Now
+                            i.fa-solid.fa-arrow-right
+                            
+                    .fieldscommon
+                        #field3
+                            img(src='Images/DSA.png' alt='DSA')
+                        .fieldscontent
+                            h2 DSA
+                            p Explore the backbone of software engineering with EverLearn&apos;s Data Structures and Algorithms courses. Enhance your problem-solving skills and pave the way to becoming a proficient coder.
+                        .btn(onclick="RedirectLearn('DSA')")
+                            | Browse Now
+                            i.fa-solid.fa-arrow-right
+                    .fieldscommon
+                        #field4
+                            img(src='Images/Data Science.png' alt='DataScience')
+                        .fieldscontent
+                            h2 Data Science
+                            p Explore the frontier of Data Science at EverLearn. From machine learning to big data analytics, master the tools to extract valuable knowledge from the vast sea of information.
+                        .btn(onclick="RedirectLearn('DS')")
+                            | Browse Now
+                            i.fa-solid.fa-arrow-right

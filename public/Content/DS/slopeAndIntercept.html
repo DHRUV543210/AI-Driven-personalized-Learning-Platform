@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slop And Intercept</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Slope and Intercept</h2>
+    <p>Now we will explain how we found the slope and intercept of our function:</p>
+    <h4>f(x) = 2x + 80</h4>
+    <p>The image below points to the Slope - which indicates how steep the line is, and the Intercept - which is the value of y, when x = 0 (the point where the diagonal line crosses the vertical axis). The red line is the continuation of the blue line from previous page.</p>
+    <img src="images/25.png" alt="">
+    <h2>Find the Slope</h2>
+    <p>The slope is defined as how much calorie burnage increases, if average pulse increases by one. It tells us how "steep" the diagonal line is.</p>
+    <p>We can find the slope by using the proportional difference of two points from the graph.</p>
+    <ul>
+        <li>If the average pulse is 80, the calorie burnage is 240</li>
+        <li>If the average pulse is 90, the calorie burnage is 260</li>
+    </ul>
+    <p>We see that if average pulse increases with 10, the calorie burnage increases by 20.</p>
+    <h4>Slope = 20/10 = 2</h4>
+    <p>The Slope is 2.</p>
+    <h2>Mathematically, Slope is Defined as:</h2>
+    <h4>Slope = f(x2) - f(x1) / x2-x1</h4>
+    <p>f(x2) = Second observation of Calorie_Burnage = 260</p>
+    <p>f(x1) = First observation of Calorie_Burnage = 240</p>
+    <p>x2 = Second observation of Average_Pulse = 90</p>
+    <p>x1 = First observation of Average_Pulse = 80</p>
+    <h4>Slope = (260-240) / (90 - 80) = 2</h4>
+    <div class="yellow">
+        <p>Be consistent to define the observations in the correct order! If not, the prediction will not be correct!</p>
+    </div>
+    <h2>Use Python to Find the Slope</h2>
+    <p>Calculate the slope with the following code:</p>
+    <h2>Find The Intercept</h2>
+    <p>The intercept is used to fine tune the functions ability to predict Calorie_Burnage.</p>
+    <p>The intercept is where the diagonal line crosses the y-axis, if it were fully drawn.</p>
+    <p>The intercept is the value of y, when x = 0.
+    </p>
+    <p>Here, we see that if average pulse (x) is zero, then the calorie burnage (y) is 80.</p>
+    <p>Sometimes, the intercept has a practical meaning. Sometimes not.</p>
+    <p><b>Does it make sense that average pulse is zero?</b></p>
+    <p>No, you would be dead and you certainly would not burn any calories.</p>
+    <p>However, we need to include the intercept in order to complete the mathematical function's ability to predict Calorie_Burnage correctly.</p>
+    <p>Other examples where the intercept of a mathematical function can have a practical meaning:</p>
+    <ul>
+        <li>Predicting next years revenue by using marketing expenditure (How much revenue will we have next year, if marketing expenditure is zero?). It is likely to assume that a company will still have some revenue even though if it does not spend money on marketing.</li>
+        <li>Fuel usage with speed (How much fuel do we use if speed is equal to 0 mph?). A car that uses gasoline will still use fuel when it is idle.</li>
+    </ul>
+    <h2>Find the Slope and Intercept Using Python</h2>
+    <p>The np.polyfit() function returns the slope and intercept.</p>
+    <p>If we proceed with the following code, we can both get the slope and intercept from the function.</p>
+    <img src="images/27.png" alt="">
+    <h2>Example Explained:</h2>
+    <ul>
+        <li>Isolate the variables Average_Pulse (x) and Calorie_Burnage (y) from health_data.
+            Call the np.polyfit() function.</li>
+        <li>The last parameter of the function specifies the degree of the function, which in this case is "1".</li>
+    </ul>
+    <div class="yellow">
+        <p><b>Tip: </b>linear functions = 1.degree function. In our example, the function is linear, which is in the 1.degree. That means that all coefficients (the numbers) are in the power of one.</p>
+    </div>
+    <p>We have now calculated the slope (2) and the intercept (80). We can write the mathematical function as follow:</p>
+    <p>Predict Calorie_Burnage by using a mathematical expression:</p>
+    <h3>f(x) = 2x + 80</h3>
+    <h2>Task:</h2>
+    <p>Now, we want to predict calorie burnage if average pulse is 135.</p>
+    <p>Remember that the intercept is a constant. A constant is a number that does not change.</p>
+    <p>We can now substitute the input x with 135:</p>
+    <h3>f(135) = 2 * 135 + 80 = 350</h3>
+    <p>If average pulse is 135, the calorie burnage is 350.</p>
+    <h2>Define the Mathematical Function in Python</h2>
+    <p>Here is the exact same mathematical function, but in Python. The function returns 2*x + 80, with x as the input:</p>
+    <img src="images/28.png" alt="">
+    <p>Try to replace x with 140 and 150.</p>
+    <h2>Plot a New Graph in Python</h2>
+    <p>Here, we plot the same graph as earlier, but formatted the axis a little bit.</p>
+    <p>Max value of the y-axis is now 400 and for x-axis is 150:</p>
+    <img src="images/29.png" alt="">
+    <h2>Example Explained:</h2>
+    <ul>
+        <li>Import the pyplot module of the matplotlib library</li>
+        <li>Plot the data from Average_Pulse against Calorie_Burnage</li>
+        <li>kind='line' tells us which type of plot we want. Here, we want to have a straight line</li>
+        <li>plt.ylim() and plt.xlim() tells us what value we want the axis to start and stop on.</li>
+        <li>plt.show() shows us the output</li>
+    </ul>
+</body>
+</html>

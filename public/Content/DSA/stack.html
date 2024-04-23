@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack</title>
+</head>
+<body>
+    <h1>Stack</h1>
+    <div class="stack">
+        A Stack is a linear data structure that follows the LIFO (Last-In-First-Out) principle. Stack has one end, whereas the Queue has two ends (front and rear). It contains only one pointer top pointer pointing to the topmost element of the stack. Whenever an element is added in the stack, it is added on the top of the stack, and the element can be deleted only from the stack. In other words, a stack can be defined as a container in which insertion and deletion can be done from the one end known as the top of the stack.
+    </div>
+    <div class="key_point">
+        <h2>Some key points related to stack</h2>
+        <ul>
+            <li>It is called as stack because it behaves like a real-world stack, piles of books, etc.</li>
+            <li>A Stack is an abstract data type with a pre-defined capacity, which means that it can store the elements of a limited size.</li>
+            <li>It is a data structure that follows some order to insert and delete the elements, and that order can be LIFO or FILO.</li>
+        </ul>
+    </div>
+    <div class="working">
+        <h2>Working of Stack</h2>
+        <p>Stack works on the LIFO pattern. As we can observe in the below figure there are five memory blocks in the stack; therefore, the size of the stack is 5.</p>
+        <p>Suppose we want to store the elements in a stack and let's assume that stack is empty. We have taken the stack of size 5 as shown below in which we are pushing the elements one by one until the stack becomes full.</p>
+
+        <img src="img/ds-stack.png" alt="">
+
+        <p>Since our stack is full as the size of the stack is 5. In the above cases, we can observe that it goes from the top to the bottom when we were entering the new element in the stack. The stack gets filled up from the bottom to the top.</p>
+
+        <p>When we perform the delete operation on the stack, there is only one way for entry and exit as the other end is closed. It follows the LIFO pattern, which means that the value entered first will be removed last. In the above case, the value 5 is entered first, so it will be removed only after the deletion of all the other elements.</p>
+    </div>
+
+    <div class="operation">
+        <h2>Standard Stack Operations</h2>
+
+        <p><b>The following are some common operations implemented on the stack:</b></p>
+
+        <ul>
+            <li><b>push():</b> When we insert an element in a stack then the operation is known as a push. If the stack is full then the overflow condition occurs</li>
+            <li><b>pop():</b> When we delete an element from the stack, the operation is known as a pop. If the stack is empty means that no element exists in the stack, this state is known as an underflow state.</li>
+            <li><b>isEmpty():</b> It determines whether the stack is empty or not</li>
+            <li><b>isFull():</b> It determines whether the stack is full or not.</li>
+            <li><b>peek():</b> It returns the element at the given position.</li>
+        </ul>
+    </div>
+
+    <div class="push">
+        <h2>PUSH operation</h2>
+        <p><b>The steps involved in the PUSH operation is given below:</b></p>
+        <ul>
+            <li>Before inserting an element in a stack, we check whether the stack is full.</li>
+            <li>If we try to insert the element in a stack, and the stack is full, then the <b><i>overflow</i></b> condition occurs.</li>
+            <li>When we initialize a stack, we set the value of top as -1 to check that the stack is empty. </li>
+            <li>When the new element is pushed in a stack, first, the value of the top gets incremented, i.e., top=top+1, and the element will be placed at the new position of the top.</li>
+            <li>The elements will be inserted until we reach the max size of the stack.</li>
+        </ul>
+        <img src="img/ds-stack2.png" alt="">
+    </div>
+
+    <div class="pop">
+        <h2>POP Operation</h2>
+        <p><b>The steps involved in the POP operation is given below:</b></p>
+        <ul>
+            <li>Before deleting the element from the stack, we check whether the stack is empty</li>
+            <li>If we try to delete the element from the empty stack, then the <b><i>underflow  </i></b> condition occurs.</li>
+            <li>If the stack is not empty, we first access the element which is pointed by the top</li>
+            <li>Once the pop operation is performed, the top is decremented by 1, i.e., top=top-1.</li>
+        </ul>
+
+        <img src="img/ds-stack3.png" alt="">
+    </div>
+
+    <div class="applications">
+        <h2>Applications of Stack</h2>
+        <p><b>The following are the applications of the stack:</b></p>
+        
+        <ul>
+            <li><b>Balancing of symbols:</b>As we know, each program has an opening and closing braces; when the opening braces come, we push the braces in a stack, and when the closing braces appear, we pop the opening braces from the stack. Therefore, the net value comes out to be zero. If any symbol is left in the stack, it means that some syntax occurs in a program.</li>
+            <li><b>String reversal:</b>Stack is also used for reversing a string. For example, we want to reverse a "HELLO" string, so we can achieve this with the help of a stack.
+                First, we push all the characters of the string in a stack until we reach the null character.
+                After pushing all the characters, we start taking out the character one by one until we reach the bottom of the stack.</li>
+            <li><b>UNDO/REDO:</b>It can also be used for performing UNDO/REDO operations. For example, we have an editor in which we write 'a', then 'b', and then 'c'; therefore, the text written in an editor is abc. So, there are three states, a, ab, and abc, which are stored in a stack. There would be two stacks in which one stack shows UNDO state, and the other shows REDO state.
+                If we want to perform UNDO operation, and want to achieve 'ab' state, then we implement pop operation.</li>
+            <li><b>Recursion:</b>The recursion means that the function is calling itself again. To maintain the previous states, the compiler creates a system stack in which all the previous records of the function are maintained.</li>
+            <li><b>DFS(Depth First Search):</b>This search is implemented on a Graph, and Graph uses the stack data structure.</li>
+        </ul>
+    </div>
+</body>
+</html>

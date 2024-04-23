@@ -1,0 +1,76 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title EverLearn | Learn 
+
+        link(rel="stylesheet", href="/style.css")
+        script(src="/script.js" defer)
+
+        //- ITS OWN CSS AND JS FILES
+        block style   
+        link(rel="stylesheet", href="/LearnCSSJS/LearnAIFiles/LearnAI.css")
+        script(src="/LearnCSSJS/LearnAIFiles/LearnAI.js" defer) 
+
+        link(rel="shortcut icon", href="/Images/EL (1) (1).png", type="image/x-icon")
+ 
+        //- Nunito Font
+        link(rel='preconnect' href='https://fonts.googleapis.com')
+        link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+        link(href='https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap' rel='stylesheet')
+    body 
+        nav.navbar#navbar
+            .logo
+                img(src="/Images/nav 42.png", alt="EverLearn")
+                h1
+                    | Ever 
+                    span Learn 
+
+            .menu  
+                ul
+                    li
+                        a(href="/") Home 
+                    li
+                        a(href="/Learn") Learn 
+                    li
+                        a(href="/Courses") Courses 
+                    li
+                        a(href="/About") About 
+
+                .search 
+                    input(type="text", placeholder="Search, eg. AI")
+                    i(class="fa-regular fa-bell")
+
+        .main
+            #no1 
+                .common.size1.blur
+                .common.size2.blur
+                .common.size3.blur
+                .common.size4.blur
+                .common.size5.blur
+            .container 
+                #container1
+                    .heading 
+                        h1 Topics
+                     
+                    .list
+                      block list
+                        ul 
+                            li
+                                a(href="/Learn/AI/Data") Data
+                            li
+                                a(href="/Learn/AI/DeepLearning") Deep Learning
+                            li
+                                a(href="/Learn/AI/Examples") Examples
+                            li
+                                a(href="/Learn/AI/LinearRegressions") Linear Regressions
+                            li
+                                a(href="/Learn/AI/Perceptrons") Perceptrons
+                            li
+                                a(href="/Learn/AI/ScatterPlots") ScatterPlots
+                            li
+                                a(href="/Learn/AI/WhatIsAI") What is AI
+                #container2
+                  block img  
+                    img(src="/Images/AI.jpeg", alt="AI")

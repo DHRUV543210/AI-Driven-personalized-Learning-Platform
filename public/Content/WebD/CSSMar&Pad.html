@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web development</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>CSS Margins and Padding</h1>
+        <p>In this article, we will learn about the CSS Margin & Padding properties of the Box Model & understand their implementation through the example. </p>
+        <p>CSS Margins: CSS margins are used to create space around the element. We can set the different sizes of margins for individual sides(top, right, bottom, left).</p>
+        <p>Margin properties can have the following values:</p>
+        <p>1.Length in cm, px, pt, etc.</p>
+        <p>2.Width % of the element.</p>
+        <p>Margin calculated by the browser: auto.</p>
+
+        <h3>Syntax:</h3>
+        <p>body{</p>
+               <p>margin:values;</p>
+        <p>}</p>
+        <p>The margin property is a shorthand property having the following individual margin properties:</p>
+
+        <p>1.margin-top:It is used to set the top margin of an element.</p>
+        <p>2.margin-right:It is used to set the right margin of an element.</p>
+        <p>3.margin-bottom: It is used to specify the amount of margin to be used on the bottom of an element.</p>
+        <p>4.margin-left: It is used to set the width of the margin on the left of the desired element.</p>
+
+        <p>Note: The margin property allows negative values.
+
+            We will discuss all 4 properties sequentially.
+            
+            If the margin property has 4 values: </p>
+            <p>margin: 40px 100px 120px 80px;</p>
+            <ul>
+                <li>top = 40px</li>
+                <li>right = 100px</li>
+                <li>bottom = 120px</li>
+                <li>left = 80px</li>
+            </ul>
+            <p>Example:This example describes the margin property by specifying the four values.</p>
+            <img src="images/CSS4.png" alt="">
+
+            <p>Output</p>
+            <img src="images/CSS5.png" alt="">
+
+            <h3>If the margin property has 3 values:</h3>
+            <ul>
+                <li>top=40px</li>
+                <li>right and left=100px</li>
+                <li>bottom=120px</li>
+            </ul>
+            <p>Example:This example describes the margin property by specifying the three values.</p>
+
+            <img src="images/CSS6.png" alt="">
+
+            <p>Output</p>
+
+            <img src="images/CSS7.png" alt="">
+
+            <h1>CSS Padding</h1>
+            <p> CSS paddings are used to create space around the element, inside any defined border. We can set different paddings for individual sides(top, right, bottom, left). It is important to add border properties to implement padding properties.</p>
+
+            <h2>Padding properties can have the following values:</h2>
+
+            <p>Length in cm, px, pt, etc.</p>
+            <p>Width % of the element.</p>
+
+            <p>The padding CSS shorthand property can be used to specify the padding for each side of an element in the following order:</p>
+            <p>1.padding-top: It is used to set the width of the padding area on the top of an element.</p>
+            <p>2.padding-right: It is used to set the width of the padding area on the right of an element.</p>
+            <p>3.padding-bottom: It is used to set the height of the padding area on the bottom of an element.</p>
+            <p>4.padding-left: It is used to set the width of the padding area on the left of an element.</p>
+
+
+            <p>If the padding has 4 values</p>
+            <p>padding:40px 100px 120px 80px</p>
+            <p>top=40px</p>
+            <p>right=100px</p>
+            <p>bottom=120px</p>
+            <p>left=80px</p>
+
+            <p>Example:This example describe the padding property by specifying the 4 values.  </p>
+
+            <img src="images/CSS8.png" alt="">
+
+            <h3>Output</h3>
+            <img src="images/CSS9.png" alt=""> 
+
+            <h3>Difference between Margin and Padding</h3>
+            <p>Margin is used to create space around elements and padding is used to create space around elements inside the border.</p>
+            <p>We can set the margin property to auto but we cannot set the padding property to auto.</p>
+            <p>In Margin property we can allow negative or float number but in padding we cannot allow negative values.</p>
+            <p>Margin and padding target all 4 sides of the element. Margin and padding will work without the border property also. The difference will be more clear with the following example.</p>
+
+            <img src="https://tse2.mm.bing.net/th?id=OIP.riH3iHYxN6UKqTZGGU6jGgHaEK&pid=Api&P=0&h=220" alt="">
+             
+    </main>
+</body>
+</html>

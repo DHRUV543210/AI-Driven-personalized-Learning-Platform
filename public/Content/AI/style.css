@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+*{
+    margin: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    padding: 8px 10px;
+}
+
+strong{
+    /* color: rgb(46, 46, 46); */
+    color: rgb(64, 64, 64);
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+p{
+    color: rgb(62,66,64);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    margin-top: 7px;
+}
+
+
+#image01{
+    width: 560px;
+}
+
+ul li{
+    font-size: 20px;
+    margin-bottom:8px;
+}
+
+.yellow{
+    padding-top: 15px;
+    padding-left: 15px;
+    background-color: rgb(255, 255, 139);
+    height: 76px;
+}
+
+.green{
+    height: 140px;
+    padding-top: 15px;
+    padding-left:30px ;
+    background-color: rgb(176, 211, 176);
+}
+
+.bigimages{
+    /* height: 400px; */
+}
+
+ol li{
+    font-size: 20px;
+    margin-bottom:8px;
+}
+
+#percepyellow{
+    padding-top: 15px;
+    padding-left: 15px;
+    background-color: rgb(255, 255, 192);
+    height: 216px;
+}
+
+#percepyellow2{
+    padding-top: 15px;
+    padding-left: 15px;
+    background-color: rgb(255, 255, 192);
+    height: 316px;
+}
+
+#Datagreen{
+    height: 440px;
+    padding-top: 15px;
+    padding-left:30px ;
+    background-color: rgb(176, 211, 176);
+}
+
+#datayellow{
+    padding-top: 15px;
+    padding-left: 15px;
+    background-color: rgb(255, 255, 192);
+    height: 166px;
+}
+
+#regressiongreen{
+    height: 220px;
+    padding-top: 15px;
+    padding-left:30px ;
+    background-color: rgb(176, 211, 176);
+}
