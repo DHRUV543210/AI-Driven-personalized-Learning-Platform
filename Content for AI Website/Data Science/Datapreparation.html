@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Preparation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Data Preparation</h1>
+    <p>Before analyzing data, a Data Scientist must extract the data, and make it clean and valuable.
+    </p>
+    <h2>Extract and Read Data With Pandas</h2>
+    <p>Before data can be analyzed, it must be imported/extracted.</p>
+    <p>In the example below, we show you how to import data using Pandas in Python.</p>
+    <p>We use the read_csv() function to import a CSV file with the health data:</p>
+    <img src="images/15.png" alt="">
+    <h3>Example Explained</h3>
+    <ul>
+        <li>Import the Pandas library</li>
+        <li>Name the data frame as health_data.</li>
+        <li>header=0 means that the headers for the variable names are to be found in the first row (note that 0 means the first row in Python)</li>
+        <li>sep="," means that "," is used as the separator between the values. This is because we are using the file type .csv (comma separated values)</li>
+    </ul>
+    <p><b>Tip: </b>If you have a large CSV file, you can use the head() function to only show the top 5rows:</p>
+    <img src="images/16.png" alt="">
+    <h2>Data Cleaning</h2>
+    <p>Look at the imported data. As you can see, the data are "dirty" with wrongly or unregistered values:</p>
+    <img src="images/17.png" alt="">
+    <ul>
+        <li>There are some blank fields</li>
+        <li>Average pulse of 9 000 is not possible</li>
+        <li>9 000 will be treated as non-numeric, because of the space separator</li>
+        <li>One observation of max pulse is denoted as "AF", which does not make sense</li>
+    </ul>
+    <p>So, we must clean the data in order to perform the analysis.</p>
+    <h1>Remove Blank Rows</h1>
+    <p>We see that the non-numeric values (9 000 and AF) are in the same rows with missing values.</p>
+    <p>Solution: We can remove the rows with missing observations to fix this problem.</p>
+    <p>When we load a data set using Pandas, all blank cells are automatically converted into "NaN" values.</p>
+    <p>So, removing the NaN cells gives us a clean data set that can be analyzed.</p>
+    <p>We can use the dropna() function to remove the NaNs. axis=0 means that we want to remove all rows that have a NaN value:</p>
+    <img src="images/18.png" alt="">
+    <p>The result is a data set without NaN rows:</p>
+    <img src="images/19.png" alt="">
+    <h2>Data Categories</h2>
+    <p>To analyze data, we also need to know the types of data we are dealing with.</p>
+    <p>Data can be split into three main categories:</p>
+    <ol>
+        <li><p><b>Numerical - </b>Contains numerical values. Can be divided into two categories:</p><ul>
+            <li>Discrete: Numbers are counted as "whole". Example: You cannot have trained 2.5 sessions, it is either 2 or 3</li>
+            <li>Continuous: Numbers can be of infinite precision. For example, you can sleep for 7 hours, 30 minutes and 20 seconds, or 7.533 hours</li>
+        </ul></li>
+        <li><p><b>Categorical - </b>Contains values that cannot be measured up against each other. Example: A color or a type of training</p></li>
+        <li><p><b>Ordinal - </b>Contains categorical data that can be measured up against each other. Example: School grades where A is better than B and so on</p></li>
+    </ol>
+    <p>By knowing the type of your data, you will be able to know what technique to use when analyzing them.</p>
+    <h2>Data Types</h2>
+    <p>We can use the info() function to list the data types within our data set:</p>
+    <img src="images/20.png" alt="">
+    <p>Result:</p>
+    <img src="images/21.png" alt="">
+    <p>We see that this data set has two different types of data:</p>
+    <ul>
+        <li>Float64</li>
+        <li>Object</li>
+    </ul>
+    <p>We cannot use objects to calculate and perform analysis here. We must convert the type object to float64 (float64 is a number with a decimal in Python).</p>
+    <p>We can use the astype() function to convert the data into float64.</p>
+    <p>The following example converts "Average_Pulse" and "Max_Pulse" into data type float64 (the other variables are already of data type float64):</p>
+    <img src="images/22.png" alt="">
+    <p>Now, the data set has only float64 data types.</p>
+    <h2>Analyze the Data</h2>
+    <p>When we have cleaned the data set, we can start analyzing the data.</p>
+    <p>We can use the describe() function in Python to summarize data:</p>
+    <img src="images/23.png" alt="">
+    <p>Result:</p>
+    <img src="images/24.png" alt="">
+    <ul>
+        <li><p><b>Count - </b>Counts the number of observations</p></li>
+        <li><p><b>Mean - </b>The average value</p></li>
+        <li><p><b>Std - </b>Standard deviation (explained in the statistics chapter)</p></li>
+        <li><p><b>Min - </b>The lowest value</p></li>
+        <li><p><b>25%,50%</b> and <b>75%</b> are percentiles (explained in the statistics chapter)</p></li>
+        <li><p><b>Max - </b>The highest value</p></li>
+    </ul>
+</body>
+</html>

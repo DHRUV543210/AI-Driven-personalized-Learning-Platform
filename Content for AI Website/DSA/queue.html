@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queue</title>
+</head>
+<body>
+    <h1>Queue</h1>
+    <div class="queue">
+        <p>A Queue is defined as a linear data structure that is open at both ends and the operations are performed in First In First Out (FIFO) order.</p>
+
+        <img src="img/queue.png" alt="">
+
+        <p>We define a queue to be a list in which all additions to the list are made at one end, and all deletions from the list are made at the other end.  The element which is first pushed into the order, the operation is first performed on that.</p>
+    </div>
+
+    <div class="FIFO">
+        <h2>FIFO Principle of Queue:</h2>
+        <ul>
+            <li>A Queue is like a line waiting to purchase tickets, where the first person in line is the first person served. (i.e. First come first serve).</li>
+            <li>Position of the entry in a queue ready to be served, that is, the first entry that will be removed from the queue, is called the front of the queue(sometimes, head of the queue), similarly, the position of the last entry in the queue, that is, the one most recently added, is called the rear (or the tail) of the queue. See the below figure.</li>
+        </ul>
+    </div>
+
+    <div class="charcterstics">
+        <h2>Characteristics of Queue:</h2>
+        <ul>
+            <li>Queue can handle multiple data.</li>
+            <li>We can access both ends.</li>
+            <li>They are fast and flexible.</li>
+        </ul>
+    </div>
+
+    <div class="representation">
+        <h2>Queue Representation:</h2>
+        <p>Like stacks, Queues can also be represented in an array: In this representation, the Queue is implemented using the array. Variables used in this case are</p>
+
+        <ul>
+            <li><b>Queue:</b> the name of the array storing queue elements.</li>
+            <li><b>Front:</b>the index where the first element is stored in the array representing the queue.</li>
+            <li><b>Rear:</b>the index where the last element is stored in an array representing the queue.</li>
+        </ul>
+    </div>
+
+    <div class="working">
+        <h2>Working of Queue</h2>
+        <p>Queue operations work as follows:</p>
+        <ul>
+            <li>two pointers FRONT and REAR</li>
+            <li>FRONT track the first element of the queue</li>
+            <li>REAR track the last element of the queue</li>
+            <li>initially, set value of FRONT and REAR to -1</li>
+        </ul>
+    </div>
+
+    <div class="enqueue">
+        <h2>Enqueue Operation</h2>
+        <ul>
+            <li>check if the queue is full</li>
+            <li>for the first element, set the value of FRONT to 0</li>
+            <li>increase the REAR index by 1</li>
+            <li>add the new element in the position pointed to by REAR</li>
+        </ul>
+    </div>
+
+    <div class="dequeue">
+        <h2>Dequeue Operation</h2>
+        <ul>
+            <li>check if the queue is empty</li>
+            <li>return the value pointed by FRONT</li>
+            <li>increase the FRONT index by 1</li>
+            <li>for the last element, reset the values of FRONT and REAR to -1</li>
+        </ul>
+    </div>
+
+    <img src="img/Queue-program-enqueue-dequeue.webp" alt="">
+
+    <div class="application">
+        <h2>Applications of Queue</h2>
+        <ul>
+            <li>CPU scheduling, Disk Scheduling</li>
+            <li>When data is transferred asynchronously between two processes.The queue is used for synchronization. For example: IO Buffers, pipes, file IO, etc</li>
+            <li>Handling of interrupts in real-time systems.</li>
+            <li>Call Center phone systems use Queues to hold people calling them in order.</li>
+        </ul>
+    </div>
+</body>
+</html>

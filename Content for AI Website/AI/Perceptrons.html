@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perceptrons</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="green">
+        <p>A <b>Perceptron</b> is an <b>Artificial Neuron</b><br><br>It is the simplest possible <b>Neural Network</b><br><br><b>Neural Networks</b> are the building blocks of <b>Machine Learning</b>.</p>
+    </div>
+    <h1>Frank Rosenblatt</h1>
+    <p><b>Frank Rosenblatt</b> was an American psychologist notable in the field of Artificial Intelligence.
+
+        In <b>1957</b> he started something really big. He "invented" a <b>Perceptron</b> program, on an IBM 704 computer at Cornell Aeronautical Laboratory.
+        
+        Scientists had discovered that brain cells <b>(Neurons)</b> receive input from our senses by electrical signals.
+        
+        The Neurons, then again, use electrical signals to store information, and to make decisions based on previous input.
+        
+        Frank had the idea that <b>Perceptrons</b> could simulate brain principles, with the ability to learn and make decisions.</p>
+    <img src="images/09.png" alt="">
+    <h1>Perceptron Example</h1>
+    <p>Imagine a perceptron (in your brain). <br><br>
+
+        The perceptron tries to decide if you should go to a concert. <br><br>
+        
+        Is the artist good? Is the weather good?<br><br>
+        
+        What weights should these facts have?</p>
+    <img src="images/10.png" alt="">
+    <h1>The Perceptron Algorithm</h1>
+    <p>Frank Rosenblatt suggested this algorithm:</p>
+    <ol>
+        <li>Set a threshold value</li>
+        <li>Multiply all inputs with its weights</li>
+        <li>Sum all the results</li>
+        <li>Activate the output</li>
+    </ol>
+    <p><b>1. Seet a threshold value:</b></p>
+    <ul><li>Threshold = 1.5</li></ul>
+    <p><b>2. Multiply all inputs with its weights:</b></p>
+    <ul>
+        <li>x1 * w1 = 1 * 0.7 = 0.7</li>
+        <li>x2 * w2 = 0 * 0.6 = 0</li>
+        <li>x3 * w3 = 1 * 0.5 = 0.5</li>
+        <li>x4 * w4 = 0 * 0.3 = 0</li>
+        <li>x5 * w5 = 1 * 0.4 = 0.4</li>
+    </ul>
+    <p><b>3. Sum all the results</b></p>
+    <ul>
+        <li>0.7 + 0 + 0.5 + 0 + 0.4 = 1.6 (The Weighted Sum)</li>
+    </ul>
+    <p><b>4. Activate the Output:</b></p>
+    <ul><li>Return true if the sum > 1.5 ("Yes I will go to the Concert")</li></ul>
+
+    <div class="yellow" id="percepyellow">
+        <h1>Note</h1>
+        <p>If the weather weight is 0.6 for you, it might be different for someone else. A higher weight means that the weather is more important to them. <br><br>
+
+            If the threshold value is 1.5 for you, it might be different for someone else. A lower threshold means they are more wanting to go to any concert.</p>
+    </div>
+
+    <img src="images/11.png" alt="">
+    <h1>Perceptron Terminology</h1>
+    <ul>
+        <li>Perceptron Inputs (nodes)</li>
+        <li>Node values (1, 0, 1, 0, 1)</li>
+        <li>Node Weights (0.7, 0.6, 0.5, 0.3, 0.4)</li>
+        <li>Activation Function (sum > treshold)</li>
+    </ul>
+    <h1>Nodes (Perceptron Inputs)</h1>
+    <p>Perceptron inputs are called <b>nodes</b>.
+
+        The nodes have both a <b>value</b> and a <b>weight</b>.</p>
+    <h1>Node Values (Input Values)</h1>
+    <p>Each input node has a binary value of <b>1 or 0</b>. <br><br>
+
+        This can be interpreted as <b>true or false</b> / <b>yes or no</b>. <br><br>
+        
+        In the example above, the node values are: 1, 0, 1, 0, 1</p>
+    <h1>Node Weights</h1>
+    <p>Weights shows the <b>strength</b> of each node.
+
+        In the example above, the node weights are: 0.7, 0.6, 0.5, 0.3, 0.4</p>
+
+    <h1>The Activation Function</h1>
+    <p>The activation function maps the the weighted sum into a binary value of <b>1 or 0</b>. <br><br>
+
+        This can be interpreted as <b>true or false</b> / <b>yes or no</b>. <br><br>
+        
+        In the example above, the activation function is simple: (sum > 1.5)</p>
+    
+    <div class="yellow" id="percepyellow2">
+        <h1>Note</h1>
+        <p>It is obvious that a decision is NOT made by <b>one neuron</b> alone. <br><br>
+
+            Many other neurons must provide input:</p>
+            <ul>
+                <li>Is the artist good</li>
+                <li>Is the weather good</li>
+                <li>...</li>
+            </ul>
+            <p><b>Multi-Layer Perceptrons </b>can be used for very sophisticated decision making.</p>
+    </div>
+
+    <h1>Neural Networks</h1>
+    <p>the <b>Perception</b> defines the first step into <b>Neural Networks:</b></p>
+    <img src="images/12.png" alt="">
+</body>
+</html>

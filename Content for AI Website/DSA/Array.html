@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main>
+        <h1>Arrays</h1>
+
+        <div class="array">
+            <h2>What is an Array?</h2>
+
+            <p>An array is a collection of items of same data type stored at contiguous memory locations. </p>
+
+            <p>In computer science, an array is a data structure consisting of a collection of elements (values or variables), of same memory size, each identified by at least one array index or key. An array is stored such that the position of each element can be computed from its index tuple by a mathematical formula.</p>
+
+            <p>Arrays are among the oldest and most important data structures, and are used by almost every program. They are also used to implement many other data structures, such as lists and strings. They effectively exploit the addressing logic of computers. In most modern computers and many external storage devices, the memory is a one-dimensional array of words, whose indices are their addresses. Processors, especially vector processors, are often optimized for array operations.</p>
+        </div>
+
+        <div class="index">
+            <h2>Elements identifier and addressing formulas</h2>
+            <p>When data objects are stored in an array, individual objects are selected by an index that is usually a non-negative scalar integer. Indexes are also called subscripts. An index maps the array value to a stored object.
+            </p>
+            <img src="img/1D-Array-C.png" alt="">
+
+            <p>There are three ways in which the elements of an array can be indexed:</p>
+            
+            <dl>
+                <dt>0 (zero-based indexing) :</dt>
+                <dd>The first element of the array is indexed by subscript of 0.</dd>
+                <dt>1 (one-based indexing) :</dt>
+                <dd>The first element of the array is indexed by subscript of 1.</dd>
+                <dt>n (n-based indexing) :</dt>
+                <dd>The base index of an array can be freely chosen. Usually programming languages allowing n-based indexing also allow negative index values and other scalar data types like enumerations, or characters may be used as an array index.</dd>
+            </dl>
+
+            <p>Using zero based indexing is the design choice of many influential programming languages, including C, Java and Lisp. This leads to simpler implementation where the subscript refers to an offset from the starting position of an array, so the first element has an offset of zero.</p>
+
+            <p>Arrays can have multiple dimensions, thus it is not uncommon to access an array using multiple indices. For example, a two-dimensional array A with three rows and four columns might provide access to the element at the 2nd row and 4th column by the expression A[1][3] in the case of a zero-based indexing system. Thus two indices are used for a two-dimensional array, three for a three-dimensional array, and n for an n-dimensional array.</p>
+
+            <p>The number of indices needed to specify an element is called the dimension, dimensionality, or rank of the array.</p>
+
+            <p>In standard arrays, each index is restricted to a certain range of consecutive integers (or consecutive values of some enumerated type), and the address of an element is computed by a "linear" formula on the indices.</p>
+        </div>
+
+        <div class="types">
+            <h2>Types of Arrays</h2>
+
+            <h3>One-dimensional arrays</h3>
+
+            <p>
+                A one-dimensional array (or single dimension array) is a type of linear array. Accessing its elements involves a single subscript which can either represent a row or column index.
+            </p>
+
+            <p>As an example consider the C declaration int anArrayName[10]; which declares a one-dimensional array of ten integers. Here, the array can store ten elements of type int . This array has indices starting from zero through nine. For example, the expressions anArrayName[0] and anArrayName[9] are the first and last elements respectively.</p>
+
+            <h3>Multidimensional arrays</h3>
+            <p>For a multidimensional array, the element with indices i,j would have address B + c · i + d · j, where the coefficients c and d are the row and column address increments, respectively.</p>
+
+            <p>For example: int a[2][3];</p>
+            <p>This means that array a has 2 rows and 3 columns, and the array is of integer type. Here we can store 6 elements they will be stored linearly but starting from first row linear then continuing with second row.</p>
+        </div>
+
+        <div class="searching">
+            <h2>Traversing and Searching in an Array</h2>
+            <h3>Traversing</h3>
+
+            <p><b>Given an integer array of size N, the task is to traverse and print the elements in the array.</b></p>
+
+            <p><b>INPUT : </b>[-2,1,4,-10,3]</p>
+            <p><b>OUTPUT : </b>-2 1 4 -10 3</p>
+
+            <h4>Approach :</h4>
+            <ol>
+                <li>Start a loop from 0 to N-1, where N is the size of array. </li>
+                <li>Access every element of array with help of arr[index] <i>(where arr is name of the given array)</i></li>
+                <li>Print the elements.</li>
+            </ol>
+
+            <p>
+                <b>Time Complexity: O(N)</b>
+                Since one traversal of the array is required to complete all operations hence overall time required by the algorithm is linear
+            </p>
+            <p>
+                <b>Space Complexity:O(1)</b>
+                Since no extra array is used so the space taken by the algorithm is constant
+            </p>
+
+            <h3>Searching</h3>
+
+            <p><b>Searching Algorithms</b> are designed to check for an element or retrieve an element from any data structure where it is stored.</p>
+
+            <p>Based on the type of search operation, these algorithms are generally classified into two categories:
+            </p>
+
+            <h4>Linear Search</h4>
+            <p><i>Linear Search</i> is defined as a sequential search algorithm that starts at one end and goes through each element of a list until the desired element is found, otherwise the search continues till the end of the data set.
+            </p>
+
+            <p>In Linear Search Algorithm,</p>
+            <ul>
+                <li>Every element is considered as a potential match for the key and checked for the same.</li>
+                <li>If any element is found equal to the key, the search is successful and the index of that element is returned.</li>
+                <li>If no element is found equal to the key, the search yields “No match found”.</li>
+            </ul>
+
+            <p><b>For example:</b>Consider the array arr[] = {10, 50, 30, 70, 80, 20, 90, 40} and key = 30</p>
+
+            <p><b>Step 1:</b> Start from the first element (index 0) and compare key with each element (arr[i]).</p>
+
+            <p>Comparing key with first element arr[0]. SInce not equal, the iterator moves to the next element as a potential match.</p>
+
+            <img src="img/Linear-search-algorithm-1.jpg" alt="">
+
+            <p>Comparing key with next element arr[1]. SInce not equal, the iterator moves to the next element as a potential match.
+            </p>
+
+            <img src="img/Linear-search-algorithm-2.jpg" alt="">
+
+            <p><b>Step 2:</b> Now when comparing arr[2] with key, the value matches. So the Linear Search Algorithm will yield a successful message and return the index of the element when key is found (here 2).</p>
+
+            <img src="img/Linear-search-algorithm-3.jpg" alt="">
+
+            <p><b>Time Complexity:</b></p>
+            <ul>
+                <li><b>Best Case:</b> In the best case, the key might be present at the first index. So the best case complexity is <b>O(1)</b></li>
+                <li><b>Worst Case:</b> In the worst case, the key might be present at the last index i.e., opposite to the end from which the search has started in the list. So the worst-case complexity is <b>O(N)</b> where N is the size of the list.</li>
+                <li><b>Average Case: O(N)</b></li>
+            </ul>
+
+            <h4>Binary Search</h4>
+            <p>Binary Search is defined as a searching algorithm used in a sorted array by repeatedly dividing the search interval in half. The idea of binary search is to use the information that the array is sorted and reduce the time complexity to 0 <b>(log N).</b> </p>
+
+            <p><b>Conditions for when to apply Binary Search in a Data Structure:</b></p>
+            <ul>
+                <li>The data structure must be sorted.</li>
+                <li>Access to any element of the data structure takes constant time.</li>
+            </ul>
+
+            <p>Binary Search algorithm,</p>
+
+            <ul>
+                <li>Divide the search space into two halves by finding the middle index “mid”. </li>
+                <li>If the key is found at middle element, the process is terminated.
+                </li>
+                <li>If the key is not found at middle element, choose which half will be used as the next search space.
+                    <ul>
+                    <li>If the key is smaller than the middle element, then the left side is used for next search.</li>
+                    <li>If the key is larger than the middle element, then the right side is used for next search.</li></ul>
+                </li>
+                <li>This process is continued until the key is found or the total search space is exhausted.</li>
+            </ul>
+
+            <p><b>For example:</b> Consider the array arr[] = {-5,-4,-3,-2,-1,0,1,2,3,4,5} and key = 2</p>
+
+            <p><b>First Step:</b> Calculate the mid and compare the mid element with the key. If the key is less than mid element, move to left and if it is greater than the mid then move search space to the right.</p>
+
+            <p>Key is greater than current mid element. The search space moves to the right.</p>
+
+            <img src="img/binary search2.png" alt="">
+
+            <p>Key is less than the current mid 3. The search space moves to the left.</p>
+
+            <img src="img/binary search3.png" alt="">
+
+            <p><b>Second Step:</b> If the key matches the value of the mid element, the element is found and stop search.</p>
+
+            <img src="img/binary search4.png" alt="">
+
+            <p><b>Time Complexity:</b></p>
+            <ul>
+                <li><b>Best Case:</b>O(1)</li>
+                <li><b>Average Case: 
+                </b>O(log N)</li>
+                <li><b>Worst Case: </b>O(log N)
+                </li>
+            </ul>
+            <p><b>Space Complexity:O(1),</b>If the recursive call stack is considered then the auxiliary space will be <b>O(logN)</b>.</p>
+        </div>
+    </main>
+    
+</body>
+</html>
